@@ -55,9 +55,9 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:12px;ma
 footer button:not(.next){background:transparent;border:0;padding:12px 0}
 footer .next{background:var(--paper);color:var(--ink);border:0}
 footer .next:hover{background:#fff}
-.credits{margin-top:32px;text-align:center;font-size:10px;line-height:1.6}
+.credits{margin-top:32px;padding-top:24px;border-top:1px solid #231f2055;text-align:center;font-size:10px;line-height:1.6}
 .credits p{margin:0 0 10px}
-.facilitator{font-size:9px;color:var(--ink);opacity:.45;text-decoration:none}
+.facilitator{font-size:10px;color:var(--ink);opacity:.7;text-decoration:none}
 .facilitator:hover,.facilitator:focus-visible{opacity:.9;text-decoration:underline}
 
 /* Facilitator results */
