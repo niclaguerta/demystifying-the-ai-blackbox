@@ -26,7 +26,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:24px;pa
 .eyebrow{font-size:10px;letter-spacing:.5px;font-weight:700}
 
 /* Step menu */
-nav{display:flex;gap:12px;overflow-x:auto;padding:16px 4vw;background:var(--paper);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:center;gap:12px;overflow-x:auto;padding:16px 4vw;background:var(--paper);border-bottom:1px solid var(--line)}
 nav button{display:flex;align-items:center;gap:9px;flex:none;padding:11px 14px;border:0;border-radius:3px;background:transparent;color:var(--muted);text-align:left}
 nav button b{font-family:var(--numerals);font-size:20px;font-weight:400;min-width:27px}
 nav button span{font-size:10px;line-height:1.35}
@@ -51,7 +51,7 @@ input{display:block;width:100%;margin-top:10px;padding:13px;background:#fffef1;b
 .primary,.next{background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:4px;padding:13px 24px;font-size:12px}
 .primary:hover{background:#47473c}
 .submit-panel .primary,.login .primary{margin-top:20px}
-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:40px;padding-top:24px;border-top:1px solid #231f2055;font-size:10px}
+footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:32px;font-size:10px}
 footer button:not(.next){background:transparent;border:0;padding:12px 0}
 footer .next{background:var(--paper);color:var(--ink);border:0}
 footer .next:hover{background:#fff}
