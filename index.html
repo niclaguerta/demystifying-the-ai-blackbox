@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demystifying the AI Blackbox</title>
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Science+Gothic:wdth,wght@100..200,100..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="workshop tone-0" id="app">
+  <header>
+    <a class="brand" href="./">Demystifying the AI Blackbox</a>
+    <span class="edition" id="edition"></span>
+  </header>
+  <nav id="steps" aria-label="Questions"></nav>
+  <main>
+    <div class="heading">
+      <span class="big-number" id="number">1</span>
+      <div><h1 id="question"></h1></div>
+    </div>
+    <label class="response">
+      <span class="visually-hidden" id="answer-label">Your response</span>
+      <textarea id="answer" rows="10" maxlength="20000" placeholder="Write your response here…" aria-labelledby="question"></textarea>
+      <small id="count">0 / 20,000</small>
+    </label>
+    <section class="submit-panel" id="submit-panel" hidden>
+      <div id="submit-form">
+        <label>Your name<input id="name" required aria-required="true" maxlength="120" autocomplete="name"></label>
+        <button class="primary" id="submit" type="button">Submit</button>
+      </div>
+      <div id="submitted" hidden>
+        <p role="status">Submitted. Thank you.</p>
+        <button class="primary" id="again" type="button">Start another response</button>
+      </div>
+      <p role="status" id="status"></p>
+    </section>
+    <footer>
+      <button id="prev" type="button">← Previous</button>
+      <span id="position">1 / 5</span>
+      <button class="next" id="next" type="button">Continue →</button>
+    </footer>
+  </main>
+</div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

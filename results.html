@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Demystifying the AI Blackbox</title>
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Science+Gothic:wdth,wght@100..200,100..900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="results">
+  <header>
+    <a class="brand" href="./">Demystifying the AI Blackbox</a>
+    <span class="edition">FACILITATOR WORKSPACE</span>
+  </header>
+  <main>
+    <p class="eyebrow">WORKSHOP FINDINGS</p>
+    <p class="lede">Review responses by submission, search across answers, and export for analysis.</p>
+
+    <form class="login" id="login">
+      <label>Facilitator access key<input type="password" id="key" autocomplete="current-password" required></label>
+      <button class="primary" id="view">View responses →</button>
+    </form>
+
+    <div id="dashboard" hidden>
+      <div class="stats">
+        <div><b id="stat-subs">0</b><span>submissions</span></div>
+        <div><b id="stat-resp">0</b><span>written responses</span></div>
+        <div><b id="stat-names">0</b><span>names</span></div>
+      </div>
+      <div class="tools">
+        <input id="search" aria-label="Search responses" placeholder="Search answers, names, or response codes…">
+        <button type="button" id="refresh">Refresh</button>
+        <button type="button" class="primary" id="csv">Export CSV</button>
+        <button type="button" id="lock">Lock</button>
+      </div>
+      <p class="lede" id="shown"></p>
+      <div id="list"></div>
+    </div>
+    <p role="status" id="status" class="lede"></p>
+  </main>
+</div>
+<script src="config.js"></script>
+<script src="results.js"></script>
+</body>
+</html>

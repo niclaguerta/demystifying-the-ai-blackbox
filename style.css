@@ -1,0 +1,108 @@
+/* Same palette as the IDEA Workshop authorship site.
+   Headings: Science Gothic (the face used in the original workshop PDFs).
+   Numerals: the original Anisette numerals. Answers: Atkinson Hyperlegible. */
+@font-face{font-family:PDFAnisette;src:url('fonts/anisette-combined-web.woff2') format('woff2'),url('fonts/anisette-combined-web.woff') format('woff');font-display:swap;font-style:normal;font-weight:400}
+
+:root{
+  --ink:#231f20;--paper:#fffef2;--paper-2:#fffeee;--muted:#68685e;--line:#231f2033;
+  --science:"Science Gothic",Arial,sans-serif;--numerals:PDFAnisette,Arial,sans-serif;--reading:"Atkinson Hyperlegible",Arial,sans-serif;
+  font-family:var(--science);font-weight:500;font-stretch:115%;font-synthesis:none;
+  color:var(--ink);background:var(--paper)
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper)}
+button,input,textarea{font:inherit;font-stretch:inherit;color:inherit}
+a{color:inherit}
+button{cursor:pointer}
+button:disabled{cursor:default;opacity:.45}
+button:focus-visible,a:focus-visible{outline:3px solid #5341b0;outline-offset:4px}
+[hidden]{display:none!important}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Header */
+header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 4vw;border-bottom:1px solid #29292433;background:var(--paper)}
+.brand{font-size:13px;font-weight:600;line-height:1.1;text-decoration:none}
+.edition{font-size:9px;letter-spacing:.5px;font-weight:700;text-align:right}
+.eyebrow{font-size:10px;letter-spacing:.5px;font-weight:700}
+
+/* Step menu */
+nav{display:flex;gap:12px;overflow-x:auto;padding:16px 4vw;background:var(--paper);border-bottom:1px solid var(--line)}
+nav button{display:flex;align-items:center;gap:9px;flex:none;padding:11px 14px;border:0;border-radius:3px;background:transparent;color:var(--muted);text-align:left}
+nav button b{font-family:var(--numerals);font-size:20px;font-weight:400;min-width:27px}
+nav button span{font-size:10px;line-height:1.35}
+nav button:hover:not(.active){background:#e8e7dc}
+nav button.active{background:var(--ink);color:var(--paper)}
+
+/* Question page */
+.workshop{min-height:100vh}
+.tone-0{background:#ef9473}.tone-1{background:#d793c0}.tone-2{background:#34bda9}.tone-3{background:#fcd815}.tone-4{background:#7fd3ec}
+.workshop main{max-width:900px;margin:0 auto;padding:35px 4vw 40px}
+.heading{display:flex;gap:20px;align-items:stretch;margin:0 0 16px}
+.big-number{font-family:var(--numerals);font-size:46px;line-height:1.15;display:flex;align-items:center;justify-content:center;min-width:75px;background:var(--paper-2);border-radius:3px;padding:14px 10px;align-self:flex-start}
+.heading>div{flex:1;background:var(--paper);border-radius:4px;padding:18px}
+h1{margin:0;font-size:clamp(17px,1.7vw,22px);line-height:1.45;font-weight:500}
+.response{display:block;background:var(--paper);border-radius:5px;padding:22px}
+.response textarea{display:block;width:100%;min-height:230px;border:0;background:transparent;resize:vertical;padding:0 0 18px;font-size:15px;line-height:1.6;outline-offset:5px}
+.response small{display:block;text-align:right;color:#77766b;font-size:9px}
+.submit-panel{background:var(--paper);border-radius:4px;margin-top:16px;padding:24px}
+.submit-panel p{font-size:12px;line-height:1.7}
+label{display:block;font-size:12px;font-weight:600}
+input{display:block;width:100%;margin-top:10px;padding:13px;background:#fffef1;border:1px solid #99998b;border-radius:5px;font-weight:500}
+.primary,.next{background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:4px;padding:13px 24px;font-size:12px}
+.primary:hover{background:#47473c}
+.submit-panel .primary,.login .primary{margin-top:20px}
+footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:40px;padding-top:24px;border-top:1px solid #231f2055;font-size:10px}
+footer button:not(.next){background:transparent;border:0;padding:12px 0}
+footer .next{background:var(--paper);color:var(--ink);border:0}
+footer .next:hover{background:#fff}
+
+/* Facilitator results */
+.results{min-height:100vh;background:#f8f7ed;font-family:Arial,Helvetica,sans-serif;font-stretch:normal;font-weight:400}
+.results header .brand{font-family:var(--science);font-stretch:115%}
+.results>main{max-width:1250px;margin:auto;padding:65px clamp(24px,6vw,95px) 40px}
+.lede{color:var(--muted);line-height:1.5;font-size:13px}
+.login{max-width:450px;margin-top:40px;padding:28px;background:#fcd815;border-radius:10px}
+.login label{font-size:14px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:35px 0}
+.stats>div{background:#7fd3ec;border-radius:8px;padding:24px}
+.stats b{display:block;font-size:38px;font-weight:400}
+.stats span{font-size:12px}
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1;min-width:200px;margin:0;font-size:12px}
+.tools button{border:1px solid #292924;border-radius:4px;padding:12px 18px;font-size:11px}
+.tools button:not(.primary){background:transparent}
+details{margin:16px 0;padding:22px;border:1px solid #d2d2c3;border-radius:8px;background:var(--paper)}
+summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:18px;align-items:center;font-size:12px}
+summary span{font-size:12px;color:#6e6e63}
+.response-toggle{margin-left:auto;white-space:nowrap}
+.collapse-label{display:none}
+details[open] .expand-label{display:none}
+details[open] .collapse-label{display:inline}
+details section{border-top:1px solid #ddd;padding:10px 0}
+h3{font-size:14px;line-height:1.4}
+.answer{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;font-size:14px}
+.empty{margin-top:25px;padding:40px;text-align:center;border:1px dashed #aaa;border-radius:8px}
+.delete-controls{border-top:1px solid #d2d2c3;padding-top:18px;margin-top:12px}
+.delete-controls p{font-size:13px}
+.delete-controls button{margin-right:10px;padding:10px 14px;border:1px solid #77776b;border-radius:4px;background:transparent;font-size:13px}
+.delete-controls button.delete-confirm{background:#9a2b2b;border-color:#9a2b2b;color:#fff}
+
+@media(max-width:760px){nav button span{display:none}}
+@media(max-width:650px){
+  header{padding:20px 16px}.brand{font-size:12px}.edition{font-size:8px}
+  nav{gap:4px;padding:12px 16px}
+  nav button{flex:1;min-width:0;padding:9px 3px}
+  nav button b{width:100%;min-width:0;text-align:center}
+  .workshop main{padding:20px 16px 30px}
+  .heading{gap:14px}
+  .big-number{font-size:37px;min-width:62px}
+  .heading>div{padding:15px}
+  h1{font-size:16px}
+  .results>main{padding:35px 16px}
+  .stats{gap:8px}.stats>div{padding:16px 12px}.stats b{font-size:30px}.stats span{font-size:11px}
+  summary .response-toggle{margin-left:0;width:100%}
+}
+
+/* Easier-to-read face for what participants type. */
+.response textarea,input{font-family:var(--reading);font-stretch:normal;font-weight:400}
+.response textarea{font-size:17px}
