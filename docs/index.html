@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demystifying the AI Blackbox</title>
+  <link rel="stylesheet" href="./workshop.css">
+  <script type="module" src="./workshop.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="./">Demystifying the AI Blackbox</a>
+    <a href="./results.html">Facilitator results</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="workshop-title">
+      <div class="wrap intro-content">
+        <p class="eyebrow">WORKSHOP ACTIVITY</p>
+        <h1 id="workshop-title">Demystifying the AI Blackbox</h1>
+        <p>Write a response to each question. Submit all five together when you’re ready.</p>
+      </div>
+    </section>
+    <nav class="wrap topic-nav" aria-label="Workshop questions"></nav>
+    <form id="workshop-form">
+      <div id="questions"></div>
+      <div class="wrap submit-bar">
+        <p>All five responses are required.</p>
+        <p id="submit-error" class="error" role="alert" hidden></p>
+        <button class="button" type="submit" disabled>Submit responses</button>
+      </div>
+    </form>
+    <section class="wrap confirmation" hidden>
+      <h2 tabindex="-1">Responses submitted</h2>
+      <p>All five answers have been saved.</p>
+      <a href="./">Return to the workshop</a>
+    </section>
+  </main>
+  <template id="question-template">
+    <section class="question-band">
+      <div class="wrap question">
+        <div class="question-heading">
+          <span class="number" aria-hidden="true"></span>
+          <h2></h2>
+        </div>
+        <div class="paper">
+          <p></p>
+          <label>Your response <span class="sr-only"></span></label>
+          <textarea required rows="5"></textarea>
+        </div>
+      </div>
+    </section>
+  </template>
+</body>
+</html>

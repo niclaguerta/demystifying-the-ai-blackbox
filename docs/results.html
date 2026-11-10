@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop findings · Demystifying the AI Blackbox</title>
+  <link rel="stylesheet" href="./workshop.css">
+  <script type="module" src="./results.js"></script>
+</head>
+<body class="findings">
+  <header class="site-header">
+    <a class="wordmark" href="./">Demystifying the AI Blackbox</a>
+    <span class="eyebrow">FACILITATOR WORKSPACE</span>
+  </header>
+  <main class="results wrap">
+    <h1 class="findings-heading" tabindex="-1">Workshop findings</h1>
+    <p>Review responses by submission, search across answers, and export for analysis.</p>
+    <form class="login">
+      <label for="access-key">Facilitator access key</label>
+      <input id="access-key" type="password" autocomplete="current-password" required>
+      <button class="button" type="submit" disabled>View responses →</button>
+    </form>
+    <section id="dashboard" hidden aria-label="Workshop responses">
+      <div class="stats">
+        <div><strong id="total">0</strong><span>submissions</span></div>
+        <div><strong id="answer-count">0</strong><span>written responses</span></div>
+      </div>
+      <div class="tools">
+        <input id="search" type="search" aria-label="Search responses" placeholder="Search answers or response codes…">
+        <button id="refresh" type="button">Refresh</button>
+        <button id="export" class="button" type="button">Export CSV</button>
+        <button id="lock" type="button">Lock</button>
+      </div>
+      <p id="filter-summary" aria-live="polite"></p>
+      <div id="submissions"></div>
+    </section>
+    <p id="status" role="status"></p>
+  </main>
+</body>
+</html>
